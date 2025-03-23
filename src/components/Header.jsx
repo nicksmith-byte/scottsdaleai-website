@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { brandColor, brandText } from "../styles/theme";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../assets/logo.jpeg";
+
+<img src={logo} alt="Scottsdale AI Logo" className="h-10 w-auto" />
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,8 +14,16 @@ export default function Header() {
   return (
     <header className="w-full px-6 py-4 bg-black text-white border-b border-white/10 sticky top-0 z-50 backdrop-blur">
       <div className="container mx-auto flex items-center justify-between">
-        {/* Logo */}
-        <div className={`text-2xl font-bold ${brandText}`}>Scottsdale AI</div>
+      <div className="flex items-center space-x-2">
+  <img
+    src={logo}
+    alt="Scottsdale AI Logo"
+    className="h-10 w-auto transition-opacity duration-200 rounded"
+  />
+  <span className="text-white text-xl font-bold tracking-tight">
+    Scottsdale <span className="text-blue-400">AI</span>
+  </span>
+</div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-gray-300">
