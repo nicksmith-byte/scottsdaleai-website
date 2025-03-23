@@ -1,27 +1,2 @@
 @import "tailwindcss";
 
-.balloon-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 50;
-  overflow: hidden;
-  font-size: 2.5rem; /* emoji size */
-}
-
-.balloon-emoji {
-  position: absolute;
-  bottom: -100px;
-  animation: float-up 8s ease-in infinite;
-}
-
-@keyframes float-up {
-  0% {
-    transform: translateY(0) scale(1) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-120vh) scale(1.1) rotate(6deg);
-    opacity: 0;
-  }
-}
